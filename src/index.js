@@ -3,10 +3,14 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { APIId, APIkeyDat } from './Keys.js';
 
-const apiID=APIId;
-const apiKey=APIkeyDat;
+var apiID=APIId;
+var apiKey=APIkeyDat;
 
+console.log(apiID);
+console.log(apiKey);
+alert("Hello World");
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
