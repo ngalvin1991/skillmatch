@@ -4,25 +4,18 @@ import './App.css';
 import Chakra from '@chakra-ui/react';
 import './Components/Contact/Contact';
 import './Components/JobSearch/JobSearch';
+import './Components/JobForm/JobForm'
 import './Components/Jumbotron/Jumbotron';
-import './Components/Navbar/Navbar';
+import './Components/Navbar/Navbar.js';
+import JobForm from "./Components/JobForm/JobForm";
+import { Navbar } from "react-bootstrap";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Navbar />
+        
       </header>
     </div>
   );
