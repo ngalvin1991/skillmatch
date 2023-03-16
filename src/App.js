@@ -1,5 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
+import Chakra from '@chakra-ui/react';
+import './Components/Footer/Footer';
+import './Components/JobSearch/JobSearch';
+import './Components/Jumbotron/Jumbotron';
+import './Components/Navbar/Navbar';
 
 function App() {
   return (
