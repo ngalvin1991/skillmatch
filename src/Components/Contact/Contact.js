@@ -16,6 +16,8 @@ function App() {
           alert(JSON.stringify(values, null, 2));
         }}
       >
+
+        
         <Form>
           <Field name="skills" type="text" />
           <Field name="city" type="text" />
