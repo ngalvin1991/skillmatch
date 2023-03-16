@@ -1,7 +1,8 @@
-import logo from './logo.svg';
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import './App.css';
 import Chakra from '@chakra-ui/react';
-import './Components/Footer/Footer';
+import './Components/Contact/Contact';
 import './Components/JobSearch/JobSearch';
 import './Components/Jumbotron/Jumbotron';
 import './Components/Navbar/Navbar';
