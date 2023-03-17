@@ -4,6 +4,7 @@ import { Formik, Field, Form } from "formik";
 import { ChakraProvider, Input, Button, FormControl } from "@chakra-ui/react";
 
 function JobForm() {
+  
   return (
     <ChakraProvider>
       <div className="form">
@@ -28,17 +29,20 @@ function JobForm() {
                 name="skills"
                 type="text"
                 variant="filled"
-                placeholder="Skills" />
+                placeholder="Skills" 
+                _placeholder={{ opacity: 1, color: 'purple.500' }}/>
                 </FormControl>
                 <FormControl>
               <Field as={Input}
                 id="city"
                 name="city"
                 type="text"
-                variant="filled" 
-                placeholder="City"/>
+                variant="outline" 
+                focusBorderColor='purple'
+                placeholder="City"
+                _placeholder={{ opacity: 1, color: 'purple.500' }}/>
                 </FormControl>
-              <Button type="submit" colorScheme="purple">Show me my dream job</Button>
+              <Button type="submit" colorScheme="purple" >Show me my dream job</Button>
             </Form>
           )}
          
