@@ -1,15 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { Formik, Field, Form } from "formik";
-import { ChakraProvider, Input, Button, FormControl } from "@chakra-ui/react";
+import { ChakraProvider, Heading, VStack, Text, Input, Button, FormControl } from "@chakra-ui/react";
 
 function JobForm() {
   return (
     <ChakraProvider>
       <div className="form">
-        <h1>Search Jobs</h1>
-        <h4>Enter up to 5 skills, separated by a comma</h4>
-        <h4>Enter your preferred location</h4>
+        <Heading as="h1" color="purple.500">Search Jobs</Heading>
+        <Text size="5xl" color="purple.500">Enter up to 5 skills, separated by a comma</Text>
+        <Text  size="5xl" color="purple.500">Enter your preferred location</Text>
         <Formik
           initialValues={{
             skills: "",
@@ -23,6 +23,7 @@ function JobForm() {
 
           {({ handleSubmit }) => (
             <Form onSubmit={handleSubmit}>
+              <VStack spacing="20px">
               <FormControl>
                 <Field as={Input}
                   id="skills"
@@ -43,6 +44,7 @@ function JobForm() {
                   _placeholder={{ opacity: 1, color: 'purple.500' }} />
               </FormControl>
               <Button type="submit" colorScheme="purple" >Show me my dream job</Button>
+            </VStack>
             </Form>
           )}
         </Formik>
