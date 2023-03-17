@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { Formik, Field, Form } from "formik";
-import { Input, ChakraProvider } from "@chakra-ui/react";
+import { ChakraProvider, Input, Button } from "@chakra-ui/react";
 
 function JobForm() {
   return (
@@ -32,7 +32,7 @@ function JobForm() {
             name="city" 
             type="text" 
             variant="filled"/>
-            <button type="submit">Show me my dream job</button>
+            <Button type="submit" colorScheme="purple">Show me my dream job</Button>
           </Form>
         </Formik>
       </div>
@@ -43,3 +43,4 @@ function JobForm() {
 ReactDOM.render(<JobForm />, document.getElementById("root"));
 
 export default JobForm;
+//do we want to add validation
