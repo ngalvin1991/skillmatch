@@ -17,6 +17,8 @@ function App() {
       <header className="App-header">
         <Home />
   
+        <Navbar />
+        <JobForm />
       </header>
     </div>
   );
