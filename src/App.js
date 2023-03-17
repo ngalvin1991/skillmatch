@@ -16,9 +16,6 @@ function App() {
     <div className="App">
       <header className="App-header">
         <Home />
-  
-        <Navbar />
-        <JobForm />
       </header>
     </div>
   );
