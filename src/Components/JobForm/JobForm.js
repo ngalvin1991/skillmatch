@@ -24,24 +24,25 @@ function JobForm() {
           {({ handleSubmit }) => (
             <Form onSubmit={handleSubmit}>
               <VStack spacing="20px">
-                <FormControl>
+                <FormControl isRequired variant="floating">
                   <Field as={Input}
                     id="skills"
                     name="skills"
                     type="text"
                     variant="filled"
-                    isRequired
+                    width="65%"
+                    focusBorderColor='pink.400'
                     placeholder="Skills"
                     _placeholder={{ opacity: 1, color: 'purple.500' }} />
                 </FormControl>
-                <FormControl>
+                <FormControl isRequired>
                   <Field as={Input}
                     id="city"
                     name="city"
                     type="text"
                     variant="filled"
-                    isRequired
-                    focusBorderColor='purple'
+                    width="65%"
+                    focusBorderColor='pink.400'
                     placeholder="City"
                     _placeholder={{ opacity: 1, color: 'purple.500' }} />
                 </FormControl>
