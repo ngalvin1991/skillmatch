@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { Formik, Field, Form } from "formik";
-import { ChakraProvider, Input, Button } from "@chakra-ui/react";
+import { ChakraProvider, Input, Button, FormControl } from "@chakra-ui/react";
 
 function JobForm() {
   return (
@@ -12,28 +12,36 @@ function JobForm() {
         <h4>Enter your preferred location</h4>
         <Formik
           initialValues={{
-            skills: "Skills",
-            city: "Location"
+            skills: "",
+            city: ""
           }}
           onSubmit={async (values) => {
             await new Promise((resolve) => setTimeout(resolve, 500));
             alert(JSON.stringify(values, null, 2));
           }}
         >
-
-          <Form>
-            <Field as={Input}
-              id="skills"
-              name="skills"
-              type="text"
-              variant="filled" />
-            <Field as ={Input} 
-            id="city"
-            name="city" 
-            type="text" 
-            variant="filled"/>
-            <Button type="submit" colorScheme="purple">Show me my dream job</Button>
-          </Form>
+          {({ handleSubmit}) => (
+            <Form onSubmit={handleSubmit}>
+              <FormControl>
+              <Field as={Input}
+                id="skills"
+                name="skills"
+                type="text"
+                variant="filled"
+                placeholder="Skills" />
+                </FormControl>
+                <FormControl>
+              <Field as={Input}
+                id="city"
+                name="city"
+                type="text"
+                variant="filled" 
+                placeholder="City"/>
+                </FormControl>
+              <Button type="submit" colorScheme="purple">Show me my dream job</Button>
+            </Form>
+          )}
+         
         </Formik>
       </div>
     </ChakraProvider>
@@ -44,3 +52,5 @@ ReactDOM.render(<JobForm />, document.getElementById("root"));
 
 export default JobForm;
 //do we want to add validation
+//shall I delete the initial value and replace with empty string and have the placeholder as "skills", "location" instead
+// check how to add isLoading loadingText="Submitting" on click
