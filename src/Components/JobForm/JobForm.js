@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { Formik, Field, Form } from "formik";
+import { Button } from "@chakra-ui/react";
 
 function JobForm() {
     return (
@@ -20,7 +21,7 @@ function JobForm() {
           <Form>
             <Field name="skills" type="text" />
             <Field name="city" type="text" />
-            <button type="submit">Show me my dream job</button>
+            <Button type="submit">Show me my dream job</Button>
           </Form>
         </Formik>
       </div>
