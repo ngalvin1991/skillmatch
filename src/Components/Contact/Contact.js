@@ -1,4 +1,4 @@
-import { ChakraProvider, Input, Button, FormControl, FormLabel, Textarea } from "@chakra-ui/react";
+import { ChakraProvider, Input, Button, FormControl, FormLabel, Textarea, Divider} from "@chakra-ui/react";
 import { Formik, Form } from "formik";
 import React from "react";
 
@@ -20,6 +20,7 @@ const Contact = () => {
     }
     return (
         <ChakraProvider>
+            <Divider orientation='horizontal' borderColor="purple.500" />
             <div className="container mt-5">
                 <h2 className="mb-3">Contact Us!</h2>
                 <Formik
