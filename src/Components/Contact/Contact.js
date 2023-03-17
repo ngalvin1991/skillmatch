@@ -1,54 +1,97 @@
+import { ChakraProvider, VStack, Heading, Input, Button, FormControl, FormLabel, Textarea, Divider } from "@chakra-ui/react";
+import { Formik, Form } from "formik";
 import React from "react";
 
 const Contact = () => {
-    const [formStatus, setFormStatus] = 
-    React.useState('Send')
+    const [formStatus, setFormStatus] =
+        React.useState('Send')
 
     const onSubmit = (e) => {
         e.preventDefault()
         setFormStatus('On the way...')
-        const { name, email, message } = 
-        e.target.elements 
+        const { name, email, message } =
+            e.target.elements
         let conFom = {
-            name: name.value, 
-            email: email.value, 
+            name: name.value,
+            email: email.value,
             message: message.value,
         }
         console.log(conFom)
     }
     return (
-        <div className="container mt-5">
-            <h2 className="mb-3">Contact Us!</h2>
-            <form onSubmit={onsubmit}>
-                <div className="mb-3">
-                    <label className="form-label" htmlFor="name">
-                        Name
-                    </label>
-                    <input className="form-control" type="text" id="name" required
-                    />
-                </div>
+        <ChakraProvider>
+            <Divider orientation='horizontal' borderColor="purple.500" />
+            <div className="container mt-5">
+                <Heading as="h2" className="mb-3" color="purple.500">Contact Us!</Heading>
+                <Formik
+                    initialValues={{
+                        name: "",
+                        email: "",
+                        message: "",
+                    }}
+                    onSubmit={async (values) => {
+                        await new Promise((resolve) => setTimeout(resolve, 500));
+                        alert(JSON.stringify(values, null, 2));
+                    }}>
+                    <Form onSubmit={onSubmit}>
+                        <VStack>
+                            <FormControl isRequired>
+                                <div className="mb-3">
+                                    {/* <FormLabel className="form-label" htmlFor="name">
+                                    Name
+                                </FormLabel> */}
+                                    <Input
+                                        type="text"
+                                        id="name"
 
-                <div className="mb-3">
-                    <label className="form-label" htmlFor="email">
-                        Email
-                    </label>
-                    <input className="form-control" type="email" id="email" required 
-                    />
-                </div>
+                                        variant="filled"
+                                        width="70%"
+                                        focusBorderColor='pink.400'
+                                        placeholder="Please Enter Your Full Name"
+                                        _placeholder={{ opacity: 1, color: 'purple.500' }}
+                                    />
+                                </div>
+                            </FormControl>
+                            <FormControl isRequired>
+                                <div className="mb-3">
+                                    {/* <FormLabel className="form-label" htmlFor="email">
+                                    Email
+                                </FormLabel> */}
+                                    <Input
+                                        type="email"
+                                        id="email"
+                                        variant="filled"
+                                        width="70%"
+                                        focusBorderColor='pink.400'
+                                        placeholder="Please Enter Your Email Address"
+                                        _placeholder={{ opacity: 1, color: 'purple.500' }}
+                                    />
+                                </div>
+                            </FormControl>
+                            <FormControl>
+                                <div className="mb-3">
+                                    {/* <FormLabel className="form-label" htmlFor="message">
+                                    Message
+                                </FormLabel> */}
+                                    <Textarea
+                                        id="message"
+                                        variant="filled"
+                                        width="70%"
+                                        focusBorderColor='pink.400'
+                                        placeholder="We would love to hear from you. Leave us a message!"
+                                        _placeholder={{ size: "lg", opacity: 1, color: 'purple.500' }}
+                                    />
+                                </div>
+                            </FormControl>
 
-                <div className="mb-3">
-                    <label className="form-label" htmlFor="message">
-                        Message 
-                        </label>
-                        <textarea className="form-control" id="message" required
-                        />
-                    </div>
-                        <button className="btn btn-light" type="submit">
-                            {formStatus}
-                        </button>
-                
-            </form>
-        </div>
+                            <Button colorScheme="purple" type="submit">
+                                {formStatus}
+                            </Button>
+                        </VStack>
+                    </Form>
+                </Formik>
+            </div>
+        </ChakraProvider>
     )
 }
 
