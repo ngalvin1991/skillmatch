@@ -9,7 +9,7 @@ function JobForm() {
       <div className="form">
         <Heading as="h1" color="purple.500">Search Jobs</Heading>
         <Text size="5xl" color="purple.500">Enter up to 5 skills, separated by a comma</Text>
-        <Text  size="5xl" color="purple.500">Enter your preferred location</Text>
+        <Text size="5xl" color="purple.500">Enter your preferred location</Text>
         <Formik
           initialValues={{
             skills: "",
@@ -24,27 +24,29 @@ function JobForm() {
           {({ handleSubmit }) => (
             <Form onSubmit={handleSubmit}>
               <VStack spacing="20px">
-              <FormControl>
-                <Field as={Input}
-                  id="skills"
-                  name="skills"
-                  type="text"
-                  variant="filled"
-                  placeholder="Skills"
-                  _placeholder={{ opacity: 1, color: 'purple.500' }} />
-              </FormControl>
-              <FormControl>
-                <Field as={Input}
-                  id="city"
-                  name="city"
-                  type="text"
-                  variant="filled"
-                  focusBorderColor='purple'
-                  placeholder="City"
-                  _placeholder={{ opacity: 1, color: 'purple.500' }} />
-              </FormControl>
-              <Button type="submit" colorScheme="purple" >Show me my dream job</Button>
-            </VStack>
+                <FormControl>
+                  <Field as={Input}
+                    id="skills"
+                    name="skills"
+                    type="text"
+                    variant="filled"
+                    isRequired
+                    placeholder="Skills"
+                    _placeholder={{ opacity: 1, color: 'purple.500' }} />
+                </FormControl>
+                <FormControl>
+                  <Field as={Input}
+                    id="city"
+                    name="city"
+                    type="text"
+                    variant="filled"
+                    isRequired
+                    focusBorderColor='purple'
+                    placeholder="City"
+                    _placeholder={{ opacity: 1, color: 'purple.500' }} />
+                </FormControl>
+                <Button type="submit" colorScheme="purple" >Show me my dream job</Button>
+              </VStack>
             </Form>
           )}
         </Formik>

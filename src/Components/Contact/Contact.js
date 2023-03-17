@@ -1,4 +1,4 @@
-import { ChakraProvider, Heading, Input, Button, FormControl, FormLabel, Textarea, Divider} from "@chakra-ui/react";
+import { ChakraProvider, Heading, Input, Button, FormControl, FormLabel, Textarea, Divider } from "@chakra-ui/react";
 import { Formik, Form } from "formik";
 import React from "react";
 
@@ -42,7 +42,7 @@ const Contact = () => {
                                 <Input
                                     type="text"
                                     id="name"
-                                    required
+                                    isrequired
                                     variant="filled"
                                     placeholder="Please Enter Your Full Name"
                                     _placeholder={{ opacity: 1, color: 'purple.500' }}
@@ -56,7 +56,7 @@ const Contact = () => {
                             <Input
                                 type="email"
                                 id="email"
-                                required
+                                isrequired
                                 variant="filled"
                                 placeholder="Please Enter Your Email Address"
                                 _placeholder={{ opacity: 1, color: 'purple.500' }}
@@ -67,11 +67,11 @@ const Contact = () => {
                             <FormLabel className="form-label" htmlFor="message">
                                 Message
                             </FormLabel>
-                            <Textarea 
-                            id="message"
-                            variant="filled"
-                            placeholder="We would love to hear from you. Leave us a message!"
-                            _placeholder={{ size: "lg", opacity: 1, color: 'purple.500' }}
+                            <Textarea
+                                id="message"
+                                variant="filled"
+                                placeholder="We would love to hear from you. Leave us a message!"
+                                _placeholder={{ size: "lg", opacity: 1, color: 'purple.500' }}
                             />
                         </div>
 
