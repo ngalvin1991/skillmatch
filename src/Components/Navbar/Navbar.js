@@ -7,7 +7,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import logo from '../Navbar/skillmatchNavbarLogo.jpg';
 
 function Navbars() {
-  return (
+  return ( 
     <Navbar bg="light" expand="lg">
       <Container fluid>
         <Navbar.Brand href="#home"><img src={logo} style={{ width: '100px' }}/></Navbar.Brand>
