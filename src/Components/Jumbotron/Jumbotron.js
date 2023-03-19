@@ -3,7 +3,7 @@ import logo from "../Jumbotron/SkillMatch.gif"
 
 function Jumbotron() {
     return (
-        <div className="container-fluid bg-dark p-5">
+        <div className="container-fluid bg-light p-5">
             <img src={logo} />
             <h1 className="display-4">SkillMatch</h1>
             <p className="lead">slogan of some kind</p>
