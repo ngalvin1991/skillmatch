@@ -1,13 +1,16 @@
 import React from "react";
+import { ChakraProvider, Heading, Divider } from "@chakra-ui/react";
 
 const Footer = () => {
  return (
+    <ChakraProvider>
+            <Divider orientation='horizontal' borderColor="purple.500" />
     <div className="main-footer">
         <div className="container">
             <div className="row">
                
                 <div className="col">
-                    <h4>Site Links</h4>
+                    <Heading fontSize="large" className="mb-3" color="purple.500">Site Links</Heading>
                     <ul className="list-unstyled">
                         <li>Home</li>
                         <li>Job Search</li>
@@ -15,7 +18,7 @@ const Footer = () => {
                     </ul>
                   </div>
                   <div className="col">
-                    <h4>Social Links</h4>
+                  <Heading fontSize="large" className="mb-3" color="purple.500">Social Links</Heading>
                     <ul className="list-unstyled">
                         <li>Github</li>
                         <li>LinkedIn</li>
@@ -31,6 +34,7 @@ const Footer = () => {
             </div>
         </div>
     </div>
+    </ChakraProvider>
  )}
 
 
