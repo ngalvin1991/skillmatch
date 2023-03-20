@@ -1,57 +1,100 @@
-import React from "react";
+import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import { Formik, Field, Form } from "formik";
-import { ChakraProvider, Heading, VStack, Text, Input, Button, FormControl } from "@chakra-ui/react";
+import {
+  ChakraProvider,
+  Heading,
+  VStack,
+  Text,
+  Input,
+  Button,
+  FormControl,
+} from "@chakra-ui/react";
+import { APIId, APIkeyDat } from "../../Keys";
+import JobSearch from "../JobSearch/JobSearch.js";
 
 function JobForm() {
+  // const [skills, setSkills] = useState("");
+  // const [city, setCity] = useState("");
+  const [jobs, setJobs] = useState([]);
+
   return (
     <ChakraProvider>
       <div className="form">
-        <Heading as="h1" color="purple.500">Search Jobs</Heading>
-        <Text size="5xl" color="purple.500">Enter up to 5 skills, separated by a comma</Text>
-        
+        <Heading as="h1" color="purple.500">
+          Search Jobs
+        </Heading>
+        <Text size="5xl" color="purple.500">
+          Enter up to 5 skills, separated by a comma
+        </Text>
+
         <Formik
           initialValues={{
             skills: "",
-            city: ""
+            city: "",
           }}
           onSubmit={async (values) => {
-            await new Promise((resolve) => setTimeout(resolve, 500));
-            alert(JSON.stringify(values, null, 2));
+            const { skills, city } = values;
+            const jobQuery = `https://api.adzuna.com/v1/api/jobs/gb/search/1?app_id=${APIId}&app_key=${APIkeyDat}&results_per_page=3&what_and=${skills}&where=${city}`;
+            try {
+              const response = await fetch(jobQuery);
+              const data = await response.json();
+              setJobs(data.results);
+            } catch (error) {
+              console.error(error);
+            }
           }}
         >
-
           {({ handleSubmit }) => (
             <Form onSubmit={handleSubmit}>
               <VStack spacing="20px">
                 <FormControl isRequired variant="floating">
-                  <Field as={Input}
+                  <Field
+                    as={Input}
                     id="skills"
                     name="skills"
                     type="text"
                     variant="filled"
                     width="25%"
-                    focusBorderColor='pink.400'
+                    focusBorderColor="pink.400"
                     placeholder="Skills"
-                    _placeholder={{ opacity: 1, color: 'purple.500' }} />
+                    _placeholder={{ opacity: 1, color: "purple.500" }}
+                  />
                 </FormControl>
-<Text size="5xl" color="purple.500">Your preferred location</Text>
+                <Text size="5xl" color="purple.500">
+                  Your preferred location
+                </Text>
                 <FormControl isRequired>
-                  <Field as={Input}
+                  <Field
+                    as={Input}
                     id="city"
                     name="city"
                     type="text"
                     variant="filled"
                     width="25%"
-                    focusBorderColor='pink.400'
+                    focusBorderColor="pink.400"
                     placeholder="City"
-                    _placeholder={{ opacity: 1, color: 'purple.500' }} />
+                    _placeholder={{ opacity: 1, color: "purple.500" }}
+                  />
                 </FormControl>
-                <Button type="submit" colorScheme="purple" >Show me my dream job</Button>
+                <Button type="submit" colorScheme="purple">
+                  Show me my dream job
+                </Button>
               </VStack>
             </Form>
           )}
         </Formik>
+
+        <div className="container">
+          <div className="row">
+            {jobs.map(job => (
+              <div className="col-md-4 mb-4" key={job.id}>
+                <JobSearch title={job.title} location={job.location.display_name} salaryRange={job.salary_min + ' - ' + job.salary_max} />
+              </div>
+            ))}
+          </div>
+        </div>
+
       </div>
     </ChakraProvider>
   );

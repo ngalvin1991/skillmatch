@@ -1,6 +1,7 @@
 import React from "react";
-// import getJobAd from "../ApiCall/ApiCall";
+//import getJobAd from "../ApiCall/ApiCall";
 import { ChakraProvider, Center, SimpleGrid, Card, CardHeader, Heading, CardBody, CardFooter, Button, Text } from "@chakra-ui/react";
+//import JobForm from "../JobForm/JobForm";
 
 function JobSearch() {
     return(
