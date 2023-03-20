@@ -30,7 +30,7 @@ function JobForm() {
                     name="skills"
                     type="text"
                     variant="filled"
-                    width="65%"
+                    width="25%"
                     focusBorderColor='pink.400'
                     placeholder="Skills"
                     _placeholder={{ opacity: 1, color: 'purple.500' }} />
@@ -41,7 +41,7 @@ function JobForm() {
                     name="city"
                     type="text"
                     variant="filled"
-                    width="65%"
+                    width="25%"
                     focusBorderColor='pink.400'
                     placeholder="City"
                     _placeholder={{ opacity: 1, color: 'purple.500' }} />

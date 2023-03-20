@@ -1,26 +1,45 @@
 import React from "react";
+import { ChakraProvider, Heading, Divider } from "@chakra-ui/react";
+import Nav from 'react-bootstrap/Nav';
 
 const Footer = () => {
  return (
+    <ChakraProvider>
+            <Divider orientation='horizontal' borderColor="purple.500" />
     <div className="main-footer">
         <div className="container">
             <div className="row">
                
                 <div className="col">
-                    <h4>Site Links</h4>
-                    <ul className="list-unstyled">
-                        <li>Home</li>
-                        <li>Job Search</li>
-                        <li>Contact Us!</li>
-                    </ul>
+                    <Heading fontSize="large" className="mb-3" color="purple.500">Site Links</Heading>
+                    <Nav defaultActiveKey="/home" as="li">
+                        <Nav.Item as="li">
+                            <Nav.Link href="#">Home</Nav.Link>
+                        </Nav.Item>
+                        <Nav.Item as="li">
+                            <Nav.Link eventKey="#">Job Search</Nav.Link>
+                        </Nav.Item>
+                        <Nav.Item as="li">
+                            <Nav.Link eventKey="#">Contact Us</Nav.Link>
+                        </Nav.Item>
+                    </Nav>
+                    
                   </div>
+                
+
                   <div className="col">
-                    <h4>Social Links</h4>
-                    <ul className="list-unstyled">
-                        <li>Github</li>
-                        <li>LinkedIn</li>
-                    </ul>
+                  <Heading fontSize="large" className="mb-3" color="purple.500">Social Links</Heading>
+                  <Nav defaultActiveKey="/home" as="li" className="justify-content-center" >
+                        <Nav.Item as="li">
+                            <Nav.Link href="#">Github</Nav.Link>
+                        </Nav.Item>
+                        <Nav.Item as="li">
+                            <Nav.Link eventKey="#">LinkedIn</Nav.Link>
+                        </Nav.Item>
+                        
+                    </Nav>
                   </div>
+
             </div>
             <hr />
             <div className="row">
@@ -31,6 +50,7 @@ const Footer = () => {
             </div>
         </div>
     </div>
+    </ChakraProvider>
  )}
 
 
