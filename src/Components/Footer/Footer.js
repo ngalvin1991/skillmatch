@@ -1,5 +1,6 @@
 import React from "react";
 import { ChakraProvider, Heading, Divider } from "@chakra-ui/react";
+import Nav from 'react-bootstrap/Nav';
 
 const Footer = () => {
  return (
@@ -11,19 +12,34 @@ const Footer = () => {
                
                 <div className="col">
                     <Heading fontSize="large" className="mb-3" color="purple.500">Site Links</Heading>
-                    <ul className="list-unstyled">
-                        <li>Home</li>
-                        <li>Job Search</li>
-                        <li>Contact Us!</li>
-                    </ul>
+                    <Nav defaultActiveKey="/home" as="li">
+                        <Nav.Item as="li">
+                            <Nav.Link href="#">Home</Nav.Link>
+                        </Nav.Item>
+                        <Nav.Item as="li">
+                            <Nav.Link eventKey="#">Job Search</Nav.Link>
+                        </Nav.Item>
+                        <Nav.Item as="li">
+                            <Nav.Link eventKey="#">Contact Us</Nav.Link>
+                        </Nav.Item>
+                    </Nav>
+                    
                   </div>
+                
+
                   <div className="col">
                   <Heading fontSize="large" className="mb-3" color="purple.500">Social Links</Heading>
-                    <ul className="list-unstyled">
-                        <li>Github</li>
-                        <li>LinkedIn</li>
-                    </ul>
+                  <Nav defaultActiveKey="/home" as="li" className="justify-content-center" >
+                        <Nav.Item as="li">
+                            <Nav.Link href="#">Github</Nav.Link>
+                        </Nav.Item>
+                        <Nav.Item as="li">
+                            <Nav.Link eventKey="#">LinkedIn</Nav.Link>
+                        </Nav.Item>
+                        
+                    </Nav>
                   </div>
+
             </div>
             <hr />
             <div className="row">
