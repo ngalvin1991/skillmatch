@@ -9,7 +9,7 @@ function JobForm() {
       <div className="form">
         <Heading as="h1" color="purple.500">Search Jobs</Heading>
         <Text size="5xl" color="purple.500">Enter up to 5 skills, separated by a comma</Text>
-        <Text size="5xl" color="purple.500">Enter your preferred location</Text>
+        
         <Formik
           initialValues={{
             skills: "",
@@ -35,6 +35,7 @@ function JobForm() {
                     placeholder="Skills"
                     _placeholder={{ opacity: 1, color: 'purple.500' }} />
                 </FormControl>
+<Text size="5xl" color="purple.500">Your preferred location</Text>
                 <FormControl isRequired>
                   <Field as={Input}
                     id="city"
