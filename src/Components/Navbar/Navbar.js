@@ -5,11 +5,12 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import logo from '../Navbar/navbarlogo4.png';
+import "../Navbar/Navbar.css";
 
 function Navbars() {
   return ( 
-    <Navbar bg="light" expand="lg">
-      <Container fluid>
+    <Navbar bg="light" expand="lg" >
+      <Container fluid class="mainNav">
         <Navbar.Brand href="#home"><img src={logo} style={{ width: '100px' }} alt="SkillMatch logo"/></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">

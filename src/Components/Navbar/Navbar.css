@@ -1,0 +1,15 @@
+.mainNav {
+    position: fixed;
+    z-index: 10;
+    margin-left: 2px;
+    margin-right: 4px;
+}
+
+/* .mainNav {
+    position: fixed;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.452) !important;
+    z-index: 10;
+    margin-left: 2px;
+    margin-right: 4px;
+} */
