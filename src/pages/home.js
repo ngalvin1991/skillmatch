@@ -7,6 +7,7 @@ import Jumbotron from '../Components/Jumbotron/Jumbotron.js';
 import Navbars from '../Components/Navbar/Navbar.js';
 import JobForm from "../Components/JobForm/JobForm.js";
 import Modal from "../Components/Modal/modal.js"
+import Footer from "../Components/Footer/Footer.js";
 
 function Home() {
   return (
@@ -16,6 +17,7 @@ function Home() {
         <JobForm />
        <Contact />
        <Modal />
+       <Footer />
     </div>
   );
 }
