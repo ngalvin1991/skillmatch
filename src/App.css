@@ -2,4 +2,18 @@
   text-align: center;
 }
 
+.navigation {
+  background-color: rgba(187, 187, 187, 0.212) !important;
+  height: 100px;
+  z-index: 10;
+  margin-left: 2px;
+  margin-right: 2px;
+  margin-bottom: 20px;
+}
 
+
+.navText {
+  color: #8C52FF !important;
+  margin: 0px 20px !important;
+  text-decoration: underline;
+}
