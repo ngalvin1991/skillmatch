@@ -2,8 +2,22 @@ import React from "react";
 //import getJobAd from "../ApiCall/ApiCall";
 import { ChakraProvider, Center, SimpleGrid, Card, CardHeader, Heading, CardBody, CardFooter, Button, Text } from "@chakra-ui/react";
 //import JobForm from "../JobForm/JobForm";
+import ModalComponent from "../Modal/modal.js";
 
-function JobSearch() {
+function JobSearch({modalShow, setModalShow}) {
+    // const showModal = () => {
+    //     jobDetailsModal()
+    // }
+    // const [isModal,setIsModal] = useState(false);
+    // const passedFunc = () => setIsModal(!isModal)
+    // const showModal = () => {
+    //     <Modal />
+    //   }
+    function handleShow() {
+        setModalShow(false);
+        let modalEl = document.getElementById("modal-show");
+        modalEl.style.visibility = "visible"
+      }
     return(
         <ChakraProvider>
             <Center>
@@ -16,7 +30,7 @@ function JobSearch() {
       <Text>View a summary of all your customers over the last month.</Text>
     </CardBody>
     <CardFooter>
-      <Button>View here</Button>
+      <Button onClick={handleShow} >View here</Button>
     </CardFooter>
   </Card>
   <Card>
@@ -27,7 +41,7 @@ function JobSearch() {
       <Text>View a summary of all your customers over the last month.</Text>
     </CardBody>
     <CardFooter>
-      <Button>View here</Button>
+      <Button onClick={handleShow} >View here</Button>
     </CardFooter>
   </Card> 
 </SimpleGrid>
@@ -36,4 +50,5 @@ function JobSearch() {
     );
 }
 
+// show={isModal} onClick={passedFunc}
 export default JobSearch;
