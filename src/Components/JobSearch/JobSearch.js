@@ -1,18 +1,7 @@
 import React from "react";
-//import getJobAd from "../ApiCall/ApiCall";
 import { ChakraProvider, Center, SimpleGrid, Card, CardHeader, Heading, CardBody, CardFooter, Button, Text } from "@chakra-ui/react";
-//import JobForm from "../JobForm/JobForm";
-import ModalComponent from "../Modal/modal.js";
 
 function JobSearch({modalShow, setModalShow}) {
-    // const showModal = () => {
-    //     jobDetailsModal()
-    // }
-    // const [isModal,setIsModal] = useState(false);
-    // const passedFunc = () => setIsModal(!isModal)
-    // const showModal = () => {
-    //     <Modal />
-    //   }
     function handleShow() {
         setModalShow(false);
         let modalEl = document.getElementById("modal-show");
@@ -50,5 +39,4 @@ function JobSearch({modalShow, setModalShow}) {
     );
 }
 
-// show={isModal} onClick={passedFunc}
 export default JobSearch;
