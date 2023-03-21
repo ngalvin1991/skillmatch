@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ReactDOM from "react-dom";
+// import ReactDOM from "react-dom";
 import { Formik, Field, Form } from "formik";
 import {
   ChakraProvider,
@@ -100,6 +100,6 @@ function JobForm() {
   );
 }
 
-ReactDOM.render(<JobForm />, document.getElementById("root"));
+// ReactDOM.render(<JobForm />, document.getElementById("root"));
 
 export default JobForm;

@@ -5,7 +5,7 @@ import Nav from 'react-bootstrap/Nav';
 const Footer = () => {
  return (
     <ChakraProvider>
-            <Divider orientation='horizontal' borderColor="purple.500" />
+            <Divider orientation='horizontal' borderColor="purple.500" mt="75" mb="75"/>
     <div className="main-footer">
         <div className="container">
             <div className="row">
