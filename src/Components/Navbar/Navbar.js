@@ -3,31 +3,20 @@ import React from "react";
 import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 import logo from '../Navbar/navbarlogo4.png';
-import "../Navbar/Navbar.css";
+
 
 function Navbars() {
-  return ( 
-    <Navbar bg="light" expand="lg" >
-      <Container fluid class="mainNav">
+  return (
+    <Navbar  expand="lg" sticky="top" className="navigation">
+      <Container fluid >
         <Navbar.Brand href="#home"><img src={logo} style={{ width: '100px' }} alt="SkillMatch logo"/></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="">Home</Nav.Link>
-            <Nav.Link href="">Job Search</Nav.Link>
-            <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-              <NavDropdown.Item href="">Contact Us</NavDropdown.Item>
-              <NavDropdown.Item href="">
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Item href="">Something</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="">
-                Separated link
-              </NavDropdown.Item>
-            </NavDropdown>
+            <Nav.Link href={'home'} className="navText">Home</Nav.Link>
+            <Nav.Link href={'JobSearch'} className="navText">Job Search</Nav.Link>
+              <Nav.Link href={'Contact'} className="navText">Contact Us</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
