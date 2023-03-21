@@ -12,7 +12,7 @@ const Footer = () => {
                
                 <div className="col">
                     <Heading fontSize="large" className="mb-3" color="purple.500">Site Links</Heading>
-                    <Nav defaultActiveKey="/home" as="li">
+                    <Nav defaultActiveKey="/home" as="li" className="justify-content-center">
                         <Nav.Item as="li">
                             <Nav.Link href="#">Home</Nav.Link>
                         </Nav.Item>
@@ -35,6 +35,12 @@ const Footer = () => {
                         </Nav.Item>
                         <Nav.Item as="li">
                             <Nav.Link eventKey="#">LinkedIn</Nav.Link>
+                        </Nav.Item>
+                        <Nav.Item as="li">
+                            <Nav.Link eventKey="#">Twitter</Nav.Link>
+                        </Nav.Item>
+                        <Nav.Item as="li">
+                            <Nav.Link eventKey="#">Instagram</Nav.Link>
                         </Nav.Item>
                         
                     </Nav>

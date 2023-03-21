@@ -1,7 +1,28 @@
-
 .center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-  }
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+  margin-top: -15px;
+}
+
+.jumboTron {
+  margin-top: 10px;
+}
+
+.headingText {
+  margin-top: -50px;
+  font-size: 30px;
+  align-content: center;
+}
+
+.mainText {
+  margin-top: 20px;
+  margin-bottom: 50px;
+  font-size: 18px;
+  align-content: center;
+}
+
+.boldText {
+  font-weight: bold;
+}
