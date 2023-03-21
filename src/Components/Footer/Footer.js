@@ -36,6 +36,12 @@ const Footer = () => {
                         <Nav.Item as="li">
                             <Nav.Link eventKey="#">LinkedIn</Nav.Link>
                         </Nav.Item>
+                        <Nav.Item as="li">
+                            <Nav.Link eventKey="#">Twitter</Nav.Link>
+                        </Nav.Item>
+                        <Nav.Item as="li">
+                            <Nav.Link eventKey="#">Instagram</Nav.Link>
+                        </Nav.Item>
                         
                     </Nav>
                   </div>
