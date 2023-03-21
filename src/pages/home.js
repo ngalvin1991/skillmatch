@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
 import '../App.css';
-// import Chakra from '@chakra-ui/react';
 import Contact from '../Components/Contact/Contact.js';
 import JobSearch from '../Components/JobSearch/JobSearch.js';
 import Jumbotron from '../Components/Jumbotron/Jumbotron.js';
