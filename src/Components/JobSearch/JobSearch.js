@@ -3,33 +3,25 @@ import React from "react";
 import { ChakraProvider, Center, SimpleGrid, Card, CardHeader, Heading, CardBody, CardFooter, Button, Text } from "@chakra-ui/react";
 //import JobForm from "../JobForm/JobForm";
 
-function JobSearch() {
+function JobSearch(props) {
+console.log(props.title);
+console.log(props.location);
+console.log(props.salaryRange);
     return(
         <ChakraProvider>
             <Center>
         <SimpleGrid spacing={4} templateColumns='repeat(auto-fill, minmax(200px, 1fr))' mt="75" mb="75">
   <Card>
     <CardHeader>
-      <Heading size='md'> Customer dashboard</Heading>
+      <Heading size='md'> {props.title} </Heading>
     </CardHeader>
     <CardBody>
-      <Text>View a summary of all your customers over the last month.</Text>
+      <Text> {props.location} </Text>
     </CardBody>
     <CardFooter>
-      <Button>View here</Button>
+    <Text> {props.salaryRange} </Text>
     </CardFooter>
   </Card>
-  <Card>
-    <CardHeader>
-      <Heading size='md'> Customer dashboard</Heading>
-    </CardHeader>
-    <CardBody>
-      <Text>View a summary of all your customers over the last month.</Text>
-    </CardBody>
-    <CardFooter>
-      <Button>View here</Button>
-    </CardFooter>
-  </Card> 
 </SimpleGrid>
 </Center>
 </ChakraProvider>

@@ -15,7 +15,6 @@ function Home() {
       <Navbars />
       <Jumbotron />
       <JobForm />
-      <JobSearch />
       <Contact />
       <Modal />
       <Footer />
