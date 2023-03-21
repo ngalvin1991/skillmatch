@@ -1,7 +1,16 @@
 
 .center {
-    display: block;
+    display: flex;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+    height: 100%;
+    margin-top: -15px;
   }
+
+  .jumboTron {
+    margin-top: 10px;
+  }
+
+.headingText {
+  margin-top: -50px;
+}
