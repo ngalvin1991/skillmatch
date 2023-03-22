@@ -12,6 +12,7 @@ import {
 } from "@chakra-ui/react";
 import { APIId, APIkeyDat } from "../../Keys";
 import JobSearch from "../JobSearch/JobSearch.js";
+import ModalComponent from "../Modal/modal";
 
 function JobForm() {
   // const [skills, setSkills] = useState("");
@@ -91,6 +92,15 @@ console.log(jobs);
             {jobs.map(job => (
               <div className="col-md-4 mb-4" key={job.id}>
                 <JobSearch title={job.title} location={job.location.display_name} salaryRange={'£'+job.salary_min + ' - ' + '£'+job.salary_max} />
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="container">
+          <div className="row">
+            {jobs.map(job => (
+              <div className="col-md-4 mb-4" key={job.id}>
+                <ModalComponent title={job.title} company={job.company.display_name} salaryRange={'£'+job.salary_min + ' - ' + '£'+job.salary_max} description={job.description}/>
               </div>
             ))}
           </div>
