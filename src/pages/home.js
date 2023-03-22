@@ -1,4 +1,5 @@
 import React from "react";
+import { Route, Routes } from "react-router-dom"
 import '../App.css';
 import Contact from '../Components/Contact/Contact.js';
 import Jumbotron from '../Components/Jumbotron/Jumbotron.js';
@@ -11,14 +12,29 @@ function Home() {
   const [modalShow, setModalShow] = React.useState(false);
 
   return (
-    <div>
-      <Navbars />
+
+
+<>
+    {/* <Navbars />
       <Jumbotron />
-      <JobForm />
+      <Route element={<JobForm />} path='JobSearch'/>
       <Contact />
       <ModalComponent modalShow={modalShow} setModalShow={setModalShow}/>
-      <Footer />
-    </div>
+     
+       */}
+       <Navbars/>
+    < Routes >
+        <Route path="/" element={<Jumbotron/>}/>
+          <Route
+            path="JobSearch"
+            element={<JobForm modalShow={modalShow} setModalShow={setModalShow}/>}
+          />
+          <Route path="contact" element={<Contact />} />
+             </Routes >
+             <ModalComponent modalShow={modalShow} setModalShow={setModalShow}/>
+             <Footer />
+             </>
+
   );
 }
 
