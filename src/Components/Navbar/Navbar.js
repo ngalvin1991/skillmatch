@@ -14,7 +14,7 @@ function Navbars() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href={'home'} className="navText">Home</Nav.Link>
+            <Nav.Link href={'/'} className="navText">Home</Nav.Link>
             <Nav.Link href={'JobSearch'} className="navText">Job Search</Nav.Link>
               <Nav.Link href={'Contact'} className="navText">Contact Us</Nav.Link>
           </Nav>
