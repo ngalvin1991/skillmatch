@@ -17,7 +17,7 @@ function JobForm() {
   // const [skills, setSkills] = useState("");
   // const [city, setCity] = useState("");
   const [jobs, setJobs] = useState([]);
-
+console.log(jobs);
   return (
     <ChakraProvider>
       <div className="form">
@@ -39,6 +39,7 @@ function JobForm() {
             try {
               const response = await fetch(jobQuery);
               const data = await response.json();
+              
               setJobs(data.results);
             } catch (error) {
               console.error(error);
@@ -89,7 +90,7 @@ function JobForm() {
           <div className="row">
             {jobs.map(job => (
               <div className="col-md-4 mb-4" key={job.id}>
-                <JobSearch title={job.title} location={job.location.display_name} salaryRange={job.salary_min + ' - ' + job.salary_max} />
+                <JobSearch title={job.title} location={job.location.display_name} salaryRange={'£'+job.salary_min + ' - ' + '£'+job.salary_max} />
               </div>
             ))}
           </div>
