@@ -31,7 +31,7 @@ function JobSearch(props) {
                 <SimpleGrid spacing={4} templateColumns='repeat(auto-fill, minmax(200px, 1fr))' mt="75" mb="75">
                     <Card>
                         <CardHeader>
-                            <Heading size='md'> {props.title} </Heading>
+                            <Heading size='md' color="purple.500"> {props.title} </Heading>
                         </CardHeader>
                         <CardBody>
                             <Text> {props.location} </Text>

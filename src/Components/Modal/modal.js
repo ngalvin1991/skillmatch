@@ -20,19 +20,19 @@ function ModalComponent(props) {
       className="modal show"
       style={{ display: 'block', visibility: "hidden" }}
     >
-      <Modal.Dialog>
+      <Modal.Dialog style={{backgroundColor: '#EDFDFD' }}>
         <Modal.Header>
-          <Modal.Title>{props.title}</Modal.Title>
+          <Modal.Title style={{ color: "#9F7AEA" }}>{props.title}</Modal.Title>
         </Modal.Header>
 
         <Modal.Body>
-          <p>{props.company}</p>
+          <p style={{ fontSize: 30, padding: "20px", color: "#9F7AEA" }}>{props.company}</p>
           <p>{props.description}</p>
-          <p>{props.salaryRange}</p>
+          <p style={{  fontSize: 20, padding: "20px", color: "#9F7AEA"}}>Salary Range: {props.salaryRange}</p>
         </Modal.Body>
 
         <Modal.Footer>
-          <Button variant="primary" onClick={handleShow} >Close</Button>
+          <Button variant="primary" onClick={handleShow} style={{backgroundColor: "#805AD5"}} >Close</Button>
         </Modal.Footer>
       </Modal.Dialog>
     </div>
