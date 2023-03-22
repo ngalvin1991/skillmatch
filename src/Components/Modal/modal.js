@@ -7,30 +7,32 @@ function ModalComponent(props) {
   console.log(props.company);
   console.log(props.description);
   console.log(props.salaryRange);
-  // function handleHide() {
-  //   setModalShow(false);
-  //   let modalEl = document.getElementById("modal-show");
-  //   modalEl.style.visibility = "hidden"
-  // }
+
+  const [modalShow, setModalShow] = React.useState(false);
+    function handleShow() {
+        setModalShow(false);
+        let modalEl = document.getElementById("modal-show");
+        modalEl.style.visibility = "hidden"
+    }
   return (
     <div
       id="modal-show"
       className="modal show"
       style={{ display: 'block', visibility: "hidden" }}
     >
-      <Modal.Dialog>
-        <Modal.Header closeButton>
-          <Modal.Title>{props.title}</Modal.Title>
+      <Modal.Dialog style={{backgroundColor: '#EDFDFD' }}>
+        <Modal.Header>
+          <Modal.Title style={{ color: "#9F7AEA" }}>{props.title}</Modal.Title>
         </Modal.Header>
 
         <Modal.Body>
-          <p>{props.company}</p>
+          <p style={{ fontSize: 30, padding: "20px", color: "#9F7AEA" }}>{props.company}</p>
           <p>{props.description}</p>
-          <p>{props.salaryRange}</p>
+          <p style={{  fontSize: 20, padding: "20px", color: "#9F7AEA"}}>Salary Range: {props.salaryRange}</p>
         </Modal.Body>
 
         <Modal.Footer>
-          <Button variant="primary">Close</Button>
+          <Button variant="primary" onClick={handleShow} style={{backgroundColor: "#805AD5"}} >Close</Button>
         </Modal.Footer>
       </Modal.Dialog>
     </div>
@@ -38,6 +40,4 @@ function ModalComponent(props) {
   );
 }
 
-// { modalShow, setModalShow }, 
-// onClick={handleHide}
 export default ModalComponent;

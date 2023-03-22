@@ -2,7 +2,6 @@ import React from "react";
 import { Route, Routes } from "react-router-dom"
 import '../App.css';
 import Contact from '../Components/Contact/Contact.js';
-//import JobSearch from '../Components/JobSearch/JobSearch.js';
 import Jumbotron from '../Components/Jumbotron/Jumbotron.js';
 import Navbars from '../Components/Navbar/Navbar.js';
 import JobForm from "../Components/JobForm/JobForm.js";
@@ -18,7 +17,7 @@ function Home() {
 <>
     {/* <Navbars />
       <Jumbotron />
-      <Route element={<JobForm modalShow={modalShow} setModalShow={setModalShow}/>} path='JobSearch'/>
+      <Route element={<JobForm />} path='JobSearch'/>
       <Contact />
       <ModalComponent modalShow={modalShow} setModalShow={setModalShow}/>
      

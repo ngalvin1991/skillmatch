@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-// import ReactDOM from "react-dom";
 import { Formik, Field, Form } from "formik";
 import {
   ChakraProvider,
@@ -15,8 +14,7 @@ import JobSearch from "../JobSearch/JobSearch.js";
 import ModalComponent from "../Modal/modal";
 
 function JobForm() {
-  // const [skills, setSkills] = useState("");
-  // const [city, setCity] = useState("");
+
   const [jobs, setJobs] = useState([]);
 console.log(jobs);
   return (
@@ -110,7 +108,5 @@ console.log(jobs);
     </ChakraProvider>
   );
 }
-
-// ReactDOM.render(<JobForm />, document.getElementById("root"));
 
 export default JobForm;

@@ -1,4 +1,4 @@
-import { ChakraProvider, VStack, Heading, Input, Button, FormControl, FormLabel, Textarea, Divider } from "@chakra-ui/react";
+import { ChakraProvider, VStack, Heading, Input, Button, FormControl, Textarea, Divider } from "@chakra-ui/react";
 import { Formik, Form } from "formik";
 import React from "react";
 
@@ -37,9 +37,6 @@ const Contact = () => {
                         <VStack>
                             <FormControl isRequired>
                                 <div className="mb-3">
-                                    {/* <FormLabel className="form-label" htmlFor="name">
-                                    Name
-                                </FormLabel> */}
                                     <Input
                                         type="text"
                                         id="name"
@@ -54,9 +51,6 @@ const Contact = () => {
                             </FormControl>
                             <FormControl isRequired>
                                 <div className="mb-3">
-                                    {/* <FormLabel className="form-label" htmlFor="email">
-                                    Email
-                                </FormLabel> */}
                                     <Input
                                         type="email"
                                         id="email"
@@ -70,9 +64,6 @@ const Contact = () => {
                             </FormControl>
                             <FormControl>
                                 <div className="mb-3">
-                                    {/* <FormLabel className="form-label" htmlFor="message">
-                                    Message
-                                </FormLabel> */}
                                     <Textarea
                                         id="message"
                                         variant="filled"
