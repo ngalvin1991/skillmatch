@@ -15,7 +15,7 @@ function Home() {
     <div>
       <Navbars />
       <Jumbotron />
-      <JobForm />
+      <JobForm modalShow={modalShow} setModalShow={setModalShow}/>
       <Contact />
       <ModalComponent modalShow={modalShow} setModalShow={setModalShow}/>
       <Footer />
