@@ -90,7 +90,7 @@ console.log(jobs);
           <div className="row">
             {jobs.map(job => (
               <div className="col-md-4 mb-4" key={job.id}>
-                <JobSearch title={job.title} location={job.location.display_name} salaryRange={job.salary_min + ' - ' + job.salary_max} />
+                <JobSearch title={job.title} location={job.location.display_name} salaryRange={'£'+job.salary_min + ' - ' + '£'+job.salary_max} />
               </div>
             ))}
           </div>
