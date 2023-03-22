@@ -34,7 +34,7 @@ console.log(jobs);
           }}
           onSubmit={async (values) => {
             const { skills, city } = values;
-            const jobQuery = `https://api.adzuna.com/v1/api/jobs/gb/search/1?app_id=${APIId}&app_key=${APIkeyDat}&results_per_page=3&what_and=${skills}&where=${city}`;
+            const jobQuery = `https://api.adzuna.com/v1/api/jobs/gb/search/1?app_id=ec468fc8&app_key=9874d489179896531020b5b3c1c50a12&results_per_page=3&what_and=${skills}&where=${city}`;
             try {
               const response = await fetch(jobQuery);
               const data = await response.json();
