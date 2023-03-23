@@ -28,7 +28,7 @@ function JobSearch(props) {
         <ChakraProvider>
               <Divider orientation='horizontal' borderColor="purple.500" mt="75"/>
             <Center>
-                <SimpleGrid spacing={4} templateColumns='repeat(auto-fill, minmax(200px, 1fr))' mt="75" mb="75">
+                <SimpleGrid spacing={3} templateColumns='repeat(auto-fill, minmax(300px, 2fr))' mt="75" mb="75">
                     <Card>
                         <CardHeader>
                             <Heading size='md' color="purple.500"> {props.title} </Heading>
