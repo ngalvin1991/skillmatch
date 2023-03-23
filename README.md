@@ -20,6 +20,25 @@ The user is then presented with a selection of 3 jobs which state the job title,
 
 The user can obtain more information by clicking the button and a modal will appear displaying more information about the job. 
 
+Please see below some examples of the different pages on the application: 
+
+Home Page:
+
+![alt text](./public/images/screenshotHome.png)
+
+Job Search: 
+
+No user input: 
+![alt text](./public/images/screenshotJobSearch1.png)
+
+With user input, which brings up the job cards: 
+
+![alt text](./public/images/screenshotJobSearch2.png)
+
+Contact: 
+
+![alt text](./public/images/screenshotContact.png)
+
 ## Installation 
 
   You will need to input the following into the terminal: ```npm i```
