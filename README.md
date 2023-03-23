@@ -47,7 +47,7 @@ Contact:
 
 ## Usage 
 
-  You can run the app through the deployed link: https://main--skillmatch-jobs.netlify.app/
+  You can run the app through the deployed link: https://skillmatch-jobs.netlify.app/
 
 ## License 
 
