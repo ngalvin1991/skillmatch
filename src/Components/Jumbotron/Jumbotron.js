@@ -12,7 +12,7 @@ function Jumbotron() {
                     <p> With our easy-to-use skills search platform, you can find the right job for your skills and experience.</p>
                     <p className="boldText">Ready to take the plunge? </p>
                     You'll be amazed at how much easier it is to find a job when you have everything you need right at your fingertips.</p>
-                <Divider orientation='horizontal' borderColor="purple.500" />
+                
             </div>
 
         </ChakraProvider>
